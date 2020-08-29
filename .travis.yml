@@ -4,6 +4,6 @@ python:
 before_script:
   - pip install -r requirements.txt
 script:
-  - pytest --cov=./
+  - coverage -m pytest
 after_success:
   - bash <(curl -s https://codecov.io/bash)

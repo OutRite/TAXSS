@@ -1,4 +1,5 @@
 # https://github.com/OutRite/TAXSS
+# dont actually use this pls
 
 def sanitize_xss(unfiltered):
 	unfiltered = unfiltered.replace('<', '&lt;')

@@ -7,7 +7,7 @@ def clean_tag(unfiltered, tagname):
 	begin_offset = unfiltered.find('<' + tagname)
 	end_offset = unfiltered.find('</' + tagname)
 	if end_offset == -1:
-		end_offset = unfiltered.find('>')
+		end_offset = unfiltered.find('>')+1
 	actual_tag_unfiltered = unfiltered[begin_offset:end_offset]
 	for i in range(len(bad_attrs)):
 		if bad_attrs[i] in actual_tag_unfiltered:

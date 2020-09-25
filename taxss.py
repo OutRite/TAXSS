@@ -11,9 +11,7 @@ def clean_tag(unfiltered, tagname):
 	actual_tag_unfiltered = unfiltered[begin_offset:end_offset]
 	for i in range(len(bad_attrs)):
 		if bad_attrs[i] in actual_tag_unfiltered:
-			end_btag_offset = actual_tag_unfiltered.find('>')
-			bad_attr_start = actual_tag_unfiltered.find(bad_attrs[i])
-			actual_tag_unfiltered = actual_tag_unfiltered[:bad_attr_start] + actual_tag_unfiltered[end_btag_offset:]
+			actual_tag_unfiltered = ''
 	return unfiltered[:begin_offset] + actual_tag_unfiltered + unfiltered[end_offset:]
 
 def sanitize_xss(unfiltered):

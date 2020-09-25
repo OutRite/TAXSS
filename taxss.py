@@ -17,7 +17,7 @@ def clean_tag(unfiltered, tagname):
 def sanitize_xss(unfiltered):
 	unfiltered = unfiltered.replace('<script>', '')
 	unfiltered = unfiltered.replace('</script>', '')
-	clean_tag(unfiltered, 'img')
+	unfiltered = clean_tag(unfiltered, 'img')
 	return unfiltered
 
 if __name__ == '__main__':

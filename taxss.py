@@ -1,6 +1,8 @@
 # https://github.com/OutRite/TAXSS
 # dont actually use this pls
 
+bad_attrs = ['onerror', 'onclick', 'onload']
+
 def clean_tag(unfiltered, tagname):
 	begin_offset = unfiltered.find('<' + tagname)
 	end_offset = unfiltered.find('</' + tagname)
